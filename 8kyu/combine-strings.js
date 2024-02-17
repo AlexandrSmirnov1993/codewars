@@ -1,7 +1,3 @@
-//Create a function named combineNames that accepts two parameters (first and last name). The function should return the full name.
+let honor = ['Каждый', 'сражается', 'за то, чего', 'ему', 'не хватает.'];
 
-function combineNames(firstName, lastName) {
-  return firstName + ' ' + lastName;
-}
-
-console.log('James', 'Stevens');
+console.log(honor.toString() + 'Поэтому я сражаюсь просто за деньги.');

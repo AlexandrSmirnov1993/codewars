@@ -1,10 +1,7 @@
-// Given a string of digits, you should replace any digit below 5 with '0' and any digit 5 and above with '1'. Return the resulting string.
+const numbers = [
+  [1, 2, 3, 4, 5],
+  [6, 7, 8, 9, 10],
+];
 
-function fakeBin(x) {
-  return x
-    .split('')
-    .map((digit) => (digit < '5' ? '0' : '1'))
-    .join('');
-}
-
-console.log(fakeBin('123456789'));
+console.log(numbers.flat().join(','));
+console.log(numbers.concat(','));

@@ -4,7 +4,7 @@
 function findShort(s) {
   const words = s.split(" ");
 
-  const shortestWord = words[0].length;
+  let shortestWord = Infinity;
 
   for (let word of words) {
     if (word.length < shortestWord) shortestWord = word.length;

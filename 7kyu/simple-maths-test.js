@@ -13,15 +13,18 @@
 // numberProperty(-7)  // ==> [false, false, false]
 // numberProperty(-10) // ==> [false, true,  true]
 
-function mathTest(number) {
-  resultArray = [];
-  number % 2 !== 0 && (number % 10 !== 0 || number > 0)
-    ? resultArray.push(true)
-    : resultArray.push(false);
-  number % 2 === 0 ? resultArray.push(true) : resultArray.push(false);
-  number % 10 === 0 ? resultArray.push(true) : resultArray.push(false);
+function numberProperty(n) {
+  function isPrime(num) {
+    if (num <= 1) return false;
+    for (let i = 2; i < num; i++) {
+      if (num % i === 0) {
+        return false;
+      }
+    }
+    return true;
+  }
 
-  return resultArray;
+  return [isPrime(n), n % 2 === 0, n % 10 === 0];
 }
 
-console.log(mathTest(-7));
+console.log(numberProperty(-7));

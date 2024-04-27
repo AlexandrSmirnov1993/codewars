@@ -15,7 +15,7 @@
 
 function mathTest(number) {
   resultArray = [];
-  number % number === 0 && number % 1 === 0
+  number % 2 !== 0 && (number % 10 !== 0 || number > 0)
     ? resultArray.push(true)
     : resultArray.push(false);
   number % 2 === 0 ? resultArray.push(true) : resultArray.push(false);

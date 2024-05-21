@@ -12,4 +12,6 @@ function likes(names) {
   // TODO
 }
 
+console.log([]);
 console.log(["Peter"]);
+console.log(["Jacob", "Alex"]);

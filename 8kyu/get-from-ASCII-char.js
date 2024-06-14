@@ -13,3 +13,4 @@ function getChar(c) {
 console.log(getChar(65));
 console.log(getChar(97));
 console.log(getChar(48));
+console.log(getChar(33));

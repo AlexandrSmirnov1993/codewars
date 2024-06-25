@@ -7,7 +7,15 @@
 // "This is another test" --> "This is rehtona test"
 
 function spinWords(string) {
-  //TODO Have fun :)
+  let resultStr = "";
+  let splitString = string.split(" ");
+  for (let i = 0; i < splitString.length; i++) {
+    if (splitString[i].length >= 5) {
+      splitString[i] = splitString[i].split("").reverse().join("");
+    }
+    resultStr += splitString[i] + " ";
+  }
+  return resultStr.trim();
 }
 
 console.log(spinWords("Hey fellow warriors"));

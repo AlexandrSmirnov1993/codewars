@@ -5,6 +5,7 @@
 // Examples (a, b) --> output (explanation)
 // (1, 0) --> 1 (1 + 0 = 1)
 // (1, 2) --> 3 (1 + 2 = 3)
+// (1, 3) --> 6 (1 + 2 + 3 = 6)
 // (0, 1) --> 1 (0 + 1 = 1)
 // (1, 1) --> 1 (1 since both are same)
 // (-1, 0) --> -1 (-1 + 0 = -1)
@@ -12,10 +13,19 @@
 // Your function should only return a number, not the explanation about how you get that number.
 
 function getSum(a, b) {
-  //Good luck!
+  let result = 0;
+  let min = Math.min(a, b);
+  let max = Math.max(a, b);
+
+  for (let i = min; i <= max; i++) {
+    result += i;
+  }
+  return result;
 }
 
 console.log(getSum(1, 0));
-console.log(getSum(1, 2));
+console.log(getSum(1, 3));
+console.log(getSum(4, 1));
+console.log(getSum(3, 3));
 console.log(getSum(-1, 0));
 console.log(getSum(-1, 2));

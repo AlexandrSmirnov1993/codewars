@@ -9,7 +9,10 @@
 // 493193  -->  4 + 9 + 3 + 1 + 9 + 3 = 29  -->  2 + 9 = 11  -->  1 + 1 = 2
 
 function digitalRoot(n) {
-  // ...
+  let arrNum = n.toString().split("").map(Number);
+  let result = arrNum.reduce((acc, res) => acc + res, 0);
+  if (result <= 9) return result;
+  else return digitalRoot(result);
 }
 
 console.log(digitalRoot(16));

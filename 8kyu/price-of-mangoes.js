@@ -7,7 +7,9 @@
 // mango(9, 5) ==> 30   # 6 mangoes for $5 per unit = $30; +3 mangoes for free
 
 function mango(quantity, price) {
-  if(quantity % price === 0);
+  let freeMango = Math.floor(quantity / 3);
+  let paidMango = quantity - freeMango;
+  return paidMango * price;
 }
 
 console.log(mango(2, 3));

@@ -11,9 +11,20 @@
 
 function getDivisorsCnt(n) {
   let times = 0;
-  for (let i = 0; i <= n; i++) {
-    if (n % i === 0) times++;
+
+  // Simple solution
+  //   for (let i = 0; i <= n; i++) {
+  //     if (n % i === 0) times++;
+  //   }
+
+  // Optimized solution
+  for (let i = 1; i * i <= n; i++) {
+    if (n % i === 0) {
+      times++;
+      if (i !== n / i) times++;
+    }
   }
+
   return times;
 }
 
